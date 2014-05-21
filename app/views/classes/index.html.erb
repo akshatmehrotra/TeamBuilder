@@ -1,0 +1,52 @@
+<div class="page-header">
+  <h1>Classes</h1>
+</div>
+
+<p><a href="/classes/new" class="btn btn-primary">Add a New Class</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Instructor name</th>
+      <th>Calendar</th>
+      <th>Department</th>
+      <th>Quarter</th>
+      <th>Section</th>
+      <th>Team size</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @classes.each do |class| %>
+      <tr>
+        <td><%= class.name %></td>
+        <td><%= class.instructor_name %></td>
+        <td><%= class.calendar_id %></td>
+        <td><%= class.department_id %></td>
+        <td><%= class.quarter_id %></td>
+        <td><%= class.section_id %></td>
+        <td><%= class.team_size %></td>
+        <td>
+          <a href="/classes/<%= class.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/classes/<%= class.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_class/<%= class.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

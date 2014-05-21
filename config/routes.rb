@@ -1,4 +1,89 @@
 Rails.application.routes.draw do
+  # Routes for the Class resource:
+  # CREATE
+  get('/classes/new', { :controller => 'classes', :action => 'new' })
+  get('/create_class', { :controller => 'classes', :action => 'create' })
+
+  # READ
+  get('/classes', { :controller => 'classes', :action => 'index' })
+  get('/classes/:id', { :controller => 'classes', :action => 'show' })
+
+  # UPDATE
+  get('/classes/:id/edit', { :controller => 'classes', :action => 'edit' })
+  get('/update_class/:id', { :controller => 'classes', :action => 'update' })
+
+  # DELETE
+  get('/delete_class/:id', { :controller => 'classes', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the Team resource:
+  # CREATE
+  get('/teams/new', { :controller => 'teams', :action => 'new' })
+  get('/create_team', { :controller => 'teams', :action => 'create' })
+
+  # READ
+  get('/teams', { :controller => 'teams', :action => 'index' })
+  get('/teams/:id', { :controller => 'teams', :action => 'show' })
+
+  # UPDATE
+  get('/teams/:id/edit', { :controller => 'teams', :action => 'edit' })
+  get('/update_team/:id', { :controller => 'teams', :action => 'update' })
+
+  # DELETE
+  get('/delete_team/:id', { :controller => 'teams', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the Student resource:
+  # CREATE
+  get('/students/new', { :controller => 'students', :action => 'new' })
+  get('/create_student', { :controller => 'students', :action => 'create' })
+
+  # READ
+  get('/students', { :controller => 'students', :action => 'index' })
+  get('/students/:id', { :controller => 'students', :action => 'show' })
+
+  # UPDATE
+  get('/students/:id/edit', { :controller => 'students', :action => 'edit' })
+  get('/update_student/:id', { :controller => 'students', :action => 'update' })
+
+  # DELETE
+  get('/delete_student/:id', { :controller => 'students', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the Membership resource:
+  # CREATE
+  get('/memberships/new', { :controller => 'memberships', :action => 'new' })
+  get('/create_membership', { :controller => 'memberships', :action => 'create' })
+
+  # READ
+  get('/memberships', { :controller => 'memberships', :action => 'index' })
+  get('/memberships/:id', { :controller => 'memberships', :action => 'show' })
+
+  # UPDATE
+  get('/memberships/:id/edit', { :controller => 'memberships', :action => 'edit' })
+  get('/update_membership/:id', { :controller => 'memberships', :action => 'update' })
+
+  # DELETE
+  get('/delete_membership/:id', { :controller => 'memberships', :action => 'destroy' })
+  #------------------------------
+
+  # Routes for the Enrolment resource:
+  # CREATE
+  get('/enrolments/new', { :controller => 'enrolments', :action => 'new' })
+  get('/create_enrolment', { :controller => 'enrolments', :action => 'create' })
+
+  # READ
+  get('/enrolments', { :controller => 'enrolments', :action => 'index' })
+  get('/enrolments/:id', { :controller => 'enrolments', :action => 'show' })
+
+  # UPDATE
+  get('/enrolments/:id/edit', { :controller => 'enrolments', :action => 'edit' })
+  get('/update_enrolment/:id', { :controller => 'enrolments', :action => 'update' })
+
+  # DELETE
+  get('/delete_enrolment/:id', { :controller => 'enrolments', :action => 'destroy' })
+  #------------------------------
+
   # Routes for the Department resource:
   # CREATE
   get('/departments/new', { :controller => 'departments', :action => 'new' })

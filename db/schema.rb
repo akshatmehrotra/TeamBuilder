@@ -11,14 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140521022811) do
+ActiveRecord::Schema.define(version: 20140521043025) do
 
   create_table "calendars", force: true do |t|
-    t.integer "year"
+    t.integer  "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "classes", force: true do |t|
+    t.string   "name"
+    t.string   "instructor_name"
+    t.integer  "calendar_id"
+    t.integer  "department_id"
+    t.integer  "quarter_id"
+    t.integer  "section_id"
+    t.integer  "team_size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "departments", force: true do |t|
-    t.string "name"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "enrolments", force: true do |t|
+    t.integer  "class_id"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "memberships", force: true do |t|
+    t.integer  "team_id"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "programs", force: true do |t|
@@ -28,11 +58,30 @@ ActiveRecord::Schema.define(version: 20140521022811) do
   end
 
   create_table "quarters", force: true do |t|
-    t.string "term"
+    t.string   "term"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "sections", force: true do |t|
-    t.integer "number"
+    t.integer  "number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "students", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "program_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", force: true do |t|
+    t.string   "name"
+    t.integer  "class_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
